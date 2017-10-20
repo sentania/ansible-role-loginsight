@@ -1,0 +1,4 @@
+- name: install loginsight from nexus
+  yum:
+    name: http://nexus.int.sentania.net:8081/repository/labassets/loginsight/4.5/centos/VMware-Log-Insight-Agent-4.5.0-5626690.noarch_10.100.100.80.rpm
+    state: present
