@@ -1,4 +1,4 @@
 - name: install loginsight from nexus
   apt:
-    deb: http://nexus.int.sentania.net:8081/repository/labassets/loginsight/4.5/vmware-log-insight-agent_4.5.0-5626690_all_10.100.100.80.deb
+    deb: https://sbowestorage.blob.core.windows.net/sbowe-blobs/vmware-log-insight-agent_8.1.0-15876228_all_172.26.1.40.deb
     state: present

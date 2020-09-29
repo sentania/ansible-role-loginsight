@@ -1,4 +1,4 @@
 - name: install loginsight from nexus
   yum:
-    name: http://nexus.int.sentania.net:8081/repository/labassets/loginsight/4.5/VMware-Log-Insight-Agent-4.5.0-5626690_10.100.100.80.msi
+    name: https://sbowestorage.blob.core.windows.net/sbowe-blobs/VMware-Log-Insight-Agent-8.1.0-15876228_172.26.1.40.msi
     state: present
