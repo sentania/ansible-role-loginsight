@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install log insight
+    include: tasks/main.yml
