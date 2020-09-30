@@ -4,3 +4,10 @@
   tasks:
   - name: Install log insight
     include: tasks/main.yml
+
+  - name: Create a temporary file
+    file:
+      path: "/tmp/{{ serviceLevel }}"
+      owner: root
+      group: root
+      mode: '0644'
