@@ -7,8 +7,9 @@
 
   - name: Create a temporary file
     file:
-      path: "/tmp/{{ serviceLevel }}"
+      dest: "/tmp/{{ serviceLevel }}"
       owner: root
       group: root
       mode: '0644'
-      state: present
+      state: touch
+      
