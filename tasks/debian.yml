@@ -1,7 +1,7 @@
 - name: install loginsight [debian]
   apt:
     deb: https://sbowestorage.blob.core.windows.net/sbowe-blobs/vmware-log-insight-agent_8.1.0-15876228_all_172.26.1.40.deb
-    state: presentconfig file [debian]
+    state: present
 
 - name: Copy config file [debian]
   copy:
