@@ -1,4 +1,19 @@
 - name: install loginsight [debian]
   apt:
     deb: https://sbowestorage.blob.core.windows.net/sbowe-blobs/vmware-log-insight-agent_8.1.0-15876228_all_172.26.1.40.deb
-    state: present
+    state: presentconfig file [debian]
+
+- name: Copy config file [debian]
+  copy:
+    src: files/liagent.ini.debian
+    dest: /var/lib/loginsight-agent/liagent.ini
+    owner: root
+    group: root
+    mode:  '0644'
+
+- name: Restart liagent [debian]
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: liagentd
+
