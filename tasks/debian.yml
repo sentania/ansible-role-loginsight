@@ -2,6 +2,7 @@
   apt:
     deb: https://sbowestorage.blob.core.windows.net/sbowe-blobs/vmware-log-insight-agent_8.1.0-15876228_all_172.26.1.40.deb
     state: present
+  become: yes
 
 - name: Copy config file [debian]
   copy:
@@ -10,10 +11,12 @@
     owner: root
     group: root
     mode:  '0644'
+  become: yes
 
 - name: Restart liagent [debian]
   systemd:
     state: restarted
     daemon_reload: yes
     name: liagentd
+  become: yes
 
