@@ -1,5 +1,13 @@
+- name: Copy MSI Local [windows]
+  win_copy:
+    src: https://sbowestorage.blob.core.windows.net/sbowe-blobs/VMware-Log-Insight-Agent-8.1.0-15876228_172.26.1.40.msi
+    dest: C:\temp\VMware-Log-Insight-Agent-8.1.0-15876228_172.26.1.40.msi
+    state: present
+    wait: yes
+
+
 - name: install loginsight [windows]
   win_package:
-    path: https://sbowestorage.blob.core.windows.net/sbowe-blobs/VMware-Log-Insight-Agent-8.1.0-15876228_172.26.1.40.msi
+    path: C:\temp\VMware-Log-Insight-Agent-8.1.0-15876228_172.26.1.40.msi
     state: present
     wait: yes
