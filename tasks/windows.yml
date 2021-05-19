@@ -1,4 +1,5 @@
 - name: install loginsight [windows]
-  yum:
-    name: https://sbowestorage.blob.core.windows.net/sbowe-blobs/VMware-Log-Insight-Agent-8.1.0-15876228_172.26.1.40.msi
+  win_msi:
+    path: https://sbowestorage.blob.core.windows.net/sbowe-blobs/VMware-Log-Insight-Agent-8.1.0-15876228_172.26.1.40.msi
     state: present
+    wait: yes
